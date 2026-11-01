@@ -1,16 +1,30 @@
-# React + Vite
+﻿# To Do List Mahasiswa
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Aplikasi React untuk menambah, mengedit, menghapus, dan menandai tugas selesai.
+Tanggal dibuat dicatat otomatis; deadline dan tanggal dibuat ditampilkan DD-MM-YYYY.
+Data disimpan pada localStorage dengan key `todo-list-mahasiswa`.
 
-Currently, two official plugins are available:
+## Menjalankan
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+```powershell
+cd todo-list-frontend
+npm install
+npm run dev
+```
 
-## React Compiler
+`npm run build` membuat versi produksi, `npm run lint` memeriksa kode.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tugas 6
 
-## Expanding the Oxlint configuration
+Komponen: Header, TaskForm, TaskSummary, TaskList, dan TaskItem.
+Input form memakai state React; daftar memakai `.map()` dan key ID unik.
+Deadline baru tidak boleh sebelum hari ini; saat edit tidak boleh sebelum tanggal dibuat.
+Ringkasan menampilkan total, belum selesai, dan selesai. Daftar kosong menampilkan
+"Belum ada data tugas". Data dibaca saat inisialisasi dan disimpan saat tugas berubah.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+Pemeriksaan manual: tambah tugas, edit nama/deadline, tandai selesai dan batalkan,
+refresh untuk memeriksa penyimpanan, lalu hapus semua tugas untuk melihat kondisi kosong.
+Ambil screenshot kondisi kosong, berisi tugas, struktur komponen, dan terminal localhost.
+
+Implementasi Tugas 6 sudah tercatat pada commit c24d9c9; commit dokumentasi ini
+menjadi penanda tahap Tugas 6 sebelum integrasi Daily Quote.
