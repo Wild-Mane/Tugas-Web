@@ -235,3 +235,72 @@ footer {
     flex: 1 1 auto;
   }
 }
+
+.daily-quote {
+  border-top: 4px solid #2563eb;
+}
+
+.daily-quote h2 {
+  margin-top: 10px;
+}
+
+.quote-description {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.quote-list {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quote-list blockquote {
+  margin: 0;
+  padding: 24px;
+  background: #eff6ff;
+  border-left: 4px solid #2563eb;
+  border-radius: 10px;
+}
+
+.quote-list blockquote p {
+  margin: 0 0 16px;
+  color: #1e3a8a;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+.quote-list blockquote footer {
+  color: #475569;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.quote-message {
+  padding: 20px;
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-radius: 8px;
+}
+
+.quote-success {
+  color: #166534;
+}
+
+.quote-error {
+  padding: 20px;
+  color: #b91c1c;
+  background: #fef2f2;
+  border-radius: 8px;
+}
+
+@media (max-width: 480px) {
+  .quote-list blockquote {
+    padding: 16px;
+  }
+
+  .quote-list blockquote p {
+    font-size: 17px;
+  }
+}

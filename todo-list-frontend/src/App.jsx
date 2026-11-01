@@ -1,9 +1,10 @@
-import { useEffect, useState } from "react";
+﻿import { useEffect, useState } from "react";
 import Header from "./components/Header";
 import TaskForm from "./components/TaskForm";
 import TaskList from "./components/TaskList";
 import TaskSummary from "./components/TaskSummary";
 import { getToday } from "./utils/date";
+import DailyQuote from "./components/DailyQuote";
 
 const STORAGE_KEY = "todo-list-mahasiswa";
 
@@ -101,6 +102,8 @@ export default function App() {
         onToggle={toggleTask}
         onUpdate={updateTask}
       />
+
+      <DailyQuote />
 
       <footer>
         Tugas disimpan di browser ini menggunakan localStorage.

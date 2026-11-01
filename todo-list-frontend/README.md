@@ -28,3 +28,22 @@ Ambil screenshot kondisi kosong, berisi tugas, struktur komponen, dan terminal l
 
 Implementasi Tugas 6 sudah tercatat pada commit c24d9c9; commit dokumentasi ini
 menjadi penanda tahap Tugas 6 sebelum integrasi Daily Quote.
+
+## Tugas 7: Daily Quote
+
+DailyQuote mengambil `https://dummyjson.com/quotes?limit=0` melalui `fetch()`.
+Respons HTTP dan struktur data diperiksa sebelum kutipan disimpan. Daftar diurutkan
+berdasarkan ID, lalu satu kutipan dipilih menggunakan nomor hari dari tanggal lokal.
+Kutipan tetap sama selama tanggal dan daftar API sama. Buka atau muat ulang halaman
+pada hari berikutnya untuk mendapatkan pilihan baru.
+
+Status loading menampilkan pesan memuat; success menampilkan kutipan melalui
+`quotes.map()` dengan `key={item.id}`. Blok catch mengubah status menjadi error
+dan menampilkan pesan. Tombol Coba Lagi atau Muat ulang meningkatkan requestNumber
+agar effect menjalankan fetch lagi. Permintaan dibatalkan ketika komponen dilepas,
+dan timeout 20 detik mencegah loading tanpa batas.
+
+Untuk screenshot loading, aktifkan throttling pada DevTools Network dan muat ulang
+kutipan. Untuk success, pilih No throttling. Untuk error, pilih Offline lalu klik
+Muat ulang tanpa refresh halaman. Kembalikan ke No throttling dan klik Coba Lagi
+untuk memeriksa pemulihan. Fitur tugas pribadi tetap dapat digunakan ketika API gagal.
